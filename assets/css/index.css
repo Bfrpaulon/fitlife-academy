@@ -1,19 +1,4 @@
 /* Reset CSS para limpar estilos padrão do navegador */
-body,
-h1,
-h2,
-h3,
-p,
-blockquote,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
 
 header {
   background-color: #f4f4f4;
@@ -94,6 +79,7 @@ nav ul li a:hover {
 .features-section h3 {
   padding-bottom: 20px;
 }
+
 .features {
   display: flex;
   justify-content: space-around;
