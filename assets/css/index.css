@@ -1,141 +1,215 @@
-/* Reset CSS para limpar estilos padrão do navegador */
+/* Definindo as cores em root */
+:root {
+  --primary-100: #FFD700;
+  --primary-200: #ddb900;
+  --primary-300: #917800;
+  --accent-100: #c49216;
+  --accent-200: #5e3b00;
+  --text-100: #dcdcdc;
+  --text-200: #929292;
+  --bg-100: #1E1E1E;
+  --bg-200: #2d2d2d;
+  --bg-300: #454545;
+}
 
+
+/* Reset CSS */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, blockquote, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-100);
+  background-color: var(--bg-100);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Global Styles */
 header {
-  background-color: #f4f4f4;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-200);
 }
 
 .logo img {
-  height: 40px;
+  max-width: 100px;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
 }
 
-nav ul li {
-  display: inline;
-  margin-left: 10px;
+nav li {
+  margin-left: 2rem;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
+nav a {
+  color: var(--text-100);
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #33333386;
+nav a:hover {
+  color: var(--primary-100);
 }
 
 .hero-section {
-  background-image: url('https://img.freepik.com/fotos-gratis/jovem-se-exercitando-com-fones-de-ouvido-no-ginasio-gerado-por-ia_188544-21524.jpg?w=900&t=st=1687910687~exp=1687911287~hmac=ef70ae7923684646e01c43257e76bd9a6d439319d78ca2602ab661aee24709fe');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
 }
 
 .hero-content {
-  text-align: center;
-  color: #fff;
+  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  color: var(--primary-100);
+  margin-bottom: 1rem;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 12px 20px;
-  background-color: #ff6600;
-  color: #fff;
-  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: var(--primary-100);
+  color: var(--text-100);
+  border-radius: 5px;
   font-weight: bold;
-  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff6600a6;
+  background-color: var(--primary-200);
 }
 
 .features-section {
-  padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
+  padding: 2rem;
 }
 
 .features-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.features-section h3 {
-  padding-bottom: 20px;
+  color: var(--primary-100);
+  margin-bottom: 2rem;
 }
 
 .features {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature {
-  max-width: 300px;
-  margin-bottom: 20px;
+  background-color: var(--bg-200);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .feature i {
-  font-size: 2rem;
-  height: 50px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  color: var(--accent-100);
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: var(--primary-100);
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  color: var(--text-200);
+  line-height: 1.6;
 }
 
 .testimonials-section {
-  padding: 40px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  padding: 2rem;
 }
 
 .testimonials-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  color: var(--primary-100);
+  margin-bottom: 2rem;
 }
 
 .testimonials {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .testimonial {
-  max-width: 400px;
-  margin-bottom: 20px;
+  background-color: var(--bg-200);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .testimonial img {
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .testimonial blockquote {
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-style: italic;
+  color: var(--text-200);
+  margin-bottom: 1rem;
 }
 
 .testimonial cite {
-  font-size: 14px;
-  font-style: italic;
+  font-weight: bold;
+  color: var(--text-100);
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
   text-align: center;
+  padding: 1rem;
+  background-color: var(--bg-200);
+  color: var(--text-200);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
 }

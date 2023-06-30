@@ -1,0 +1,330 @@
+// Definição das cores personalizadas
+$primary-100: #FFD700;
+$primary-200: #ddb900;
+$primary-300: #917800;
+$accent-100: #c49216;
+$accent-200: #5e3b00;
+$text-100: #dcdcdc;
+$text-200: #929292;
+$bg-100: #1E1E1E;
+$bg-200: #2d2d2d;
+$bg-300: #454545;
+
+// Mixin para animação de fade-in
+@mixin fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Mixin para sombras
+@mixin box-shadow($color) {
+  box-shadow: 0 2px 4px 0 rgba($color, 0.2);
+}
+
+// Mixin para transições suaves
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Mixin para botões
+@mixin button($background-color, $text-color) {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover {
+    background-color: darken($background-color, 10%);
+    color: lighten($text-color, 10%);
+  }
+}
+
+// Estilos do layout
+body {
+  background-color: $bg-100;
+  color: $text-100;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+
+  @media (min-width: 1200px) {
+    padding: 4rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
+
+.title {
+  color: $primary-100;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: $text-200;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: $primary-200;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 4rem;
+  }
+
+  .plan-item {
+    background-color: $bg-200;
+    padding: 1rem;
+    border-radius: 5px;
+    @include box-shadow($bg-100);
+    @include transition(box-shadow);
+    @include fade-in;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $primary-100;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-price {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-description {
+      flex-grow: 1;
+      color: $text-200;
+      margin-bottom: 1rem;
+    }
+
+    .button-wrapper {
+      text-align: center;
+      margin-top: auto;
+
+      .select-button {
+        @include button($primary-200, $text-100);
+      }
+    }
+  }
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 4rem;
+  }
+
+  .service-item {
+    background-color: $bg-200;
+    padding: 1rem;
+    border-radius: 5px;
+    @include box-shadow($bg-100);
+    @include transition(box-shadow);
+    @include fade-in;
+
+    i {
+      font-size: 2rem;
+      color: $accent-100;
+      margin-bottom: 1rem;
+    }
+
+    .service-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $primary-100;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-description {
+      color: $text-200;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.benefits-list {
+  list-style-type: disc;
+  color: $text-200;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.terms {
+  color: $text-200;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  color: $text-200;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.contact-form {
+  label {
+    color: $text-200;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: $bg-200;
+    color: $text-100;
+    border: none;
+  }
+
+  .submit-button {
+    @include button($accent-100, $text-100);
+  }
+}
+
+.footer {
+  background-color: $bg-300;
+  padding: 1rem;
+  text-align: center;
+  color: $text-200;
+  margin-top: 2rem;
+
+  @media (min-width: 1200px) {
+    margin-top: 4rem;
+  }
+}
+
+// Animações
+.card-animation {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: card-slide 0.5s ease-in-out forwards;
+
+  @keyframes card-slide {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.fade-in-element {
+  opacity: 0;
+  animation: fade-in-element 0.5s ease-in-out forwards;
+
+  @keyframes fade-in-element {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// Cards flutuantes
+.flipping-card {
+  perspective: 1000px;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1200px) {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    @include box-shadow($bg-100);
+
+    @media (min-width: 1200px) {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 5px;
+
+      &.front {
+        background-color: $bg-200;
+        color: $text-100;
+      }
+
+      &.back {
+        background-color: $accent-100;
+        color: $text-100;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
