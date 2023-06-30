@@ -1,0 +1,94 @@
+/* Definindo as cores em root */
+:root {
+    --primary-100: #FFD700;
+    --primary-200: #ddb900;
+    --primary-300: #917800;
+    --accent-100: #c49216;
+    --accent-200: #5e3b00;
+    --text-100: #dcdcdc;
+    --text-200: #929292;
+    --bg-100: #1E1E1E;
+    --bg-200: #2d2d2d;
+    --bg-300: #454545;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+blockquote,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Global Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-200);
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: var(--text-100);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-100);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--bg-200);
+    color: var(--text-200);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 1rem 0;
+    }
+}

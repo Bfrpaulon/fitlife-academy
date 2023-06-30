@@ -10,6 +10,7 @@ $bg-100: #1E1E1E;
 $bg-200: #2d2d2d;
 $bg-300: #454545;
 
+
 // Mixin para animação de fade-in
 @mixin fade-in {
   animation: fade-in 0.5s ease-in-out;
@@ -51,6 +52,11 @@ $bg-300: #454545;
 }
 
 // Estilos do layout
+
+* {
+  text-align: center;
+}
+
 body {
   background-color: $bg-100;
   color: $text-100;
@@ -145,6 +151,7 @@ body {
 }
 
 .services-list {
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
@@ -165,6 +172,7 @@ body {
     i {
       font-size: 2rem;
       color: $accent-100;
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
@@ -183,7 +191,7 @@ body {
 }
 
 .benefits-list {
-  list-style-type: disc;
+  list-style-type: none;
   color: $text-200;
   margin-bottom: 2rem;
   padding-left: 1.5rem;

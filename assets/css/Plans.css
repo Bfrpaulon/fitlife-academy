@@ -6,6 +6,10 @@
     opacity: 1;
   }
 }
+* {
+  text-align: center;
+}
+
 body {
   background-color: #1E1E1E;
   color: #dcdcdc;
@@ -106,6 +110,7 @@ body {
 }
 
 .services-list {
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
@@ -127,6 +132,7 @@ body {
 .services-list .service-item i {
   font-size: 2rem;
   color: #c49216;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .services-list .service-item .service-name {
@@ -141,7 +147,7 @@ body {
 }
 
 .benefits-list {
-  list-style-type: disc;
+  list-style-type: none;
   color: #929292;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
