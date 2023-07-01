@@ -71,5 +71,14 @@
     <p>&copy; 2023 FitLife - Your Academy. All rights reserved.</p>
   </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      $(".testimonial img").css("transform", "translateY(" + scrollTop / 2 + "px)");
+    });
+  });
+</script>
 
 </html>
