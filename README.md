@@ -3,6 +3,7 @@
 This is a project for the creation of the FitLife gym website. The objective is to allow the gym to have an online presence and to promote its services and attract new customers.
 
 # Demonstration
+![FitLife - Your Academypng](https://github.com/Bfrpaulon/fitlife-academy/assets/122818137/aa97ad04-bc7b-4d36-8efb-4ed42604ea6c)
 
 
 ## Technologies Used
