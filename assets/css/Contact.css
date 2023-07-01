@@ -1,172 +1,170 @@
 :root {
-    --primary-100:#FFD700;
-    --primary-200:#ddb900;
-    --primary-300:#917800;
-    --accent-100:#c49216;
-    --accent-200:#5e3b00;
-    --text-100:#dcdcdc;
-    --text-200:#929292;
-    --bg-100:#1E1E1E;
-    --bg-200:#2d2d2d;
-    --bg-300:#454545;
-      
+  --primary-100:#FFD700;
+  --primary-200:#ddb900;
+  --primary-300:#917800;
+  --accent-100:#c49216;
+  --accent-200:#5e3b00;
+  --text-100:#dcdcdc;
+  --text-200:#929292;
+  --bg-100:#1E1E1E;
+  --bg-200:#2d2d2d;
+  --bg-300:#454545;
+   
 }
-/* Reset padrão para limpar estilos do navegador */
+/* Reset default to clear browser styles */
 * {
-    margin: 0 auto;
-    list-style: none;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  /* Estilo geral da página */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-100);
-    background-color: var(--bg-100);
-  }
-  
-  h1,
-  h2 {
-    color: var(--primary-100);
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo do cabeçalho */
-  header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--bg-200);
-  }
-  
-  /* Estilo do formulário de contato */
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-top: 10px;
-    color: var(--text-200);
-  }
-  
-  input,
-  textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bg-200);
-    color: var(--text-100);
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-100);
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: var(--primary-200);
-  }
-  
-  /* Estilo dos elementos da seção de informações de contato */
-  #informacoes-contato ul {
-    list-style: none;
-  }
-  
-  #informacoes-contato li {
-    margin-bottom: 10px;
-    color: var(--text-200);
-  }
-  
-  /* Estilo do mapa */
-  #endereco-mapa iframe {
-    width: 100%;
-    height: 400px;
-    border: none;
-  }
-  
-  /* Estilo das redes sociais */
-  #redes-sociais ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  #redes-sociais li {
-    margin: 0 10px;
-  }
-  
-  #redes-sociais a {
-    color: var(--text-200);
-    text-decoration: none;
-  }
-  
-  #redes-sociais a:hover {
-    color: var(--accent-100);
-  }
-  
-  /* Estilo do FAQ */
-  #faq dt {
-    color: var(--text-100);
-    margin-top: 20px;
-  }
-  
-  /* Estilo dos links de política de privacidade e termos de uso */
-  #politica-privacidade li {
-    margin-bottom: 10px;
-  }
-  
-  #politica-privacidade a {
-    color: var(--text-200);
-    text-decoration: none;
-  }
-  
-  #politica-privacidade a:hover {
-    color: var(--accent-100);
-  }
-  
-  /* Estilo das informações adicionais */
-  #informacoes-adicionais ul {
-    list-style: none;
-  }
-  
-  #informacoes-adicionais li {
-    margin-bottom: 10px;
-    color: var(--text-200);
-  }
-  
-  /* Estilo do chat ou suporte online */
-  #chat-suporte button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--accent-100);
-    color: white;
-    cursor: pointer;
-  }
-  
-  #chat-suporte button:hover {
-    background-color: var(--accent-200);
-  }
-  
-  /* Estilo do rodapé */
-  footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--bg-200);
-    color: var(--text-200);
-  }
-  
+  list-style: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* General page style */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-100);
+  background-color: var(--bg-100);
+}
+
+h1,
+h2 {
+  color: var(--primary-100);
+  margin-bottom: 20px;
+}
+
+/* Header style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-200);
+}
+/* Style of contact form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  color: var(--text-200);
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bg-200);
+  color: var(--text-100);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-100);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-200);
+}
+
+/* Style the contact information section elements */
+#contact-information ul {
+  list-style: none;
+}
+
+#contact-information li {
+  margin-bottom: 10px;
+  color: var(--text-200);
+}
+
+/* Map style */
+#address-map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* Social media style */
+#social-networks ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#social-networks read {
+  margin: 0 10px;
+}
+
+#social-networks a {
+  color: var(--text-200);
+  text-decoration: none;
+}
+
+#social-networks a:hover {
+  color: var(--accent-100);
+}
+
+/* FAQ Style */
+#faq dt {
+  color: var(--text-100);
+  margin-top: 20px;
+}
+
+/* Style of privacy policy and terms of use links */
+#policy-privacy li {
+  margin-bottom: 10px;
+}
+
+#privacy-policy a {
+  color: var(--text-200);
+  text-decoration: none;
+}
+
+#privacy-policy a:hover {
+  color: var(--accent-100);
+}
+
+/* Additional information style */
+#additional-information ul {
+  list-style: none;
+}
+
+#additional-information li {
+  margin-bottom: 10px;
+  color: var(--text-200);
+}
+
+/* Chat style or online support */
+#chat-support button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-100);
+  color: white;
+  cursor: pointer;
+}
+
+#chat-support button:hover {
+  background-color: var(--accent-200);
+}
+
+/* Footer Style */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--bg-200);
+  color: var(--text-200);
+}

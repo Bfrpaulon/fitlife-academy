@@ -62,8 +62,29 @@ nav a {
 nav a:hover {
   color: var(--primary-100);
 }
+/* Estilo básico do carrossel */
+.hero-carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  height: 400px; /* Defina a altura que você deseja para o carrossel */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Animação para deslizar as imagens */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 .hero-section {
+  background-image: url(https://img.freepik.com/free-photo/multi-ethnic-group-athletes-smiling-standing-generated-by-ai_24911-72406.jpg?size=626&ext=jpg&ga=GA1.2.388241916.1688088402&semt=ais_ai_generated);
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
